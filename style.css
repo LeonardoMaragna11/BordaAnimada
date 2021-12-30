@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    height: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+body {
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #282C34;
+}
+div{
+    border: 1px solid #2b2f38;
+    width: 200px;
+    height: 200px;
+    box-shadow: 16px 14px 20px #181a1f;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+div::before{
+    content:"RA TA TA TAA";
+    background-image: conic-gradient(
+        transparent 120deg,
+        #282C34 20deg
+    );
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+    border-radius: 50%;
+    background-color: #61DAFB;
+}
+div::after{
+    content:"";
+    width: 190px;
+    height: 190px;
+    background: #282C34;
+    position: absolute;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    font-size: larger;
+    letter-spacing: 1px;
+    box-shadow: inset 20px 20px 20px #1d2025;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
